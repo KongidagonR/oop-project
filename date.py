@@ -22,8 +22,8 @@ def date_diff (date1, date2):
     d2, m2, y2 = map(int, date2.split("-"))
 
     if y1 == y2:
-        return day_of_year(d2, m2, y2) day_of_year(d1, m1, y1) + 1
-    days = day_in_year(y1) day_of_year(d1, m1, y1) + 1
+        return day_of_year(d2, m2, y2) - day_of_year(d1, m1, y1) + 1
+    days = day_in_year(y1) - day_of_year(d1, m1, y1) + 1
 
     for year in range(y1 + 1, y2):
         days += day_in_year(year)
